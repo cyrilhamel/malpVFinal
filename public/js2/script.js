@@ -10,23 +10,23 @@ function changeMenu1(){
 };
 
 function changeMenu2(){
-    document.getElementById('descript').textContent= 'Découvrez nos plats';
+    document.getElementById('descript').textContent= 'Notre Actualité';
 };
 
 function changeMenu3(){
-    document.getElementById('descript').textContent= 'Découvrez nos desserts';
+    document.getElementById('descript').textContent= 'Nos ateliers cuisine';
 };
 
 function changeMenu4(){
-    document.getElementById('descript').textContent= 'Découvrez nos produits';
+    document.getElementById('descript').textContent= 'Nos Créations';
 };
 
 function changeMenu5(){
-    document.getElementById('descript').textContent= 'Vous aussi vous pouvez le faire';
+    document.getElementById('descript').textContent= 'Commandez nos créations';
 };
 
 function changeMenu6(){
-    document.getElementById('descript').textContent= 'Commandez vos plats favoris';
+    document.getElementById('descript').textContent= 'Contactez nous';
 };
 
 

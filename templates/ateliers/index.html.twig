@@ -1,20 +1,45 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AteliersController!{% endblock %}
+{% block title %}Ateliers index{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Ateliers index</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>NomAtelier</th>
+                <th>DescrAtelier</th>
+                <th>DateAtelier</th>
+                <th>DateFinAtelier</th>
+                <th>PlacesAtelier</th>
+                <th>PrixAtelier</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for atelier in ateliers %}
+            <tr>
+                <td>{{ atelier.id }}</td>
+                <td>{{ atelier.nomAtelier }}</td>
+                <td>{{ atelier.descrAtelier }}</td>
+                <td>{{ atelier.dateAtelier ? atelier.dateAtelier|date('Y-m-d') : '' }}</td>
+                <td>{{ atelier.dateFinAtelier ? atelier.dateFinAtelier|date('Y-m-d') : '' }}</td>
+                <td>{{ atelier.placesAtelier }}</td>
+                <td>{{ atelier.prixAtelier }}</td>
+                <td>
+                    <a href="{{ path('app_ateliers_show', {'id': atelier.id}) }}">show</a>
+                    <a href="{{ path('app_ateliers_edit', {'id': atelier.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/malpVFinal/src/Controller/AteliersController.php'|file_link(0) }}">src/Controller/AteliersController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/malpVFinal/templates/ateliers/index.html.twig'|file_link(0) }}">templates/ateliers/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <a href="{{ path('app_ateliers_new') }}">Create new</a>
 {% endblock %}
