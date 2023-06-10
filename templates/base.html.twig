@@ -2,15 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <title>{% block title %}Bienvenue!{% endblock %}</title>
+        <link rel="icon" href="{{asset('images/toque.png') }}">
         {% block stylesheets %}
+        <link href="{{ asset('css2/style.css') }}" rel="stylesheet" />
         {% endblock %}
 
         {% block javascripts %}
+        <script src="{{ asset('js2/script.js') }}"></script>
         {% endblock %}
     </head>
     <body>
+     <nav>
+            <div class="parentCircle">
+                <ol>
+                <li class="circle1" onclick="maRedirection('{{ url('app_accueil') }}')"onmouseenter="changeMenu1()"onmouseleave="changeMenu1()"><span class="arrondi">La Main à la pâte</span></li>
+                <li class="circle2" onclick="maRedirection('{{ url('app_articles') }}')"onmouseenter="changeMenu2()"onmouseleave="changeMenu1()"><span class="arrondi">Actualité</span></li>
+                <li class="circle3" onclick="maRedirection('{{ url('app_ateliers') }}')"onmouseenter="changeMenu3()"onmouseleave="changeMenu1()"><span class="arrondi">Ateliers</span></li>
+                <li class="circle4" onclick="maRedirection('{{ url('app_produits') }}')"onmouseenter="changeMenu4()"onmouseleave="changeMenu1()"><span class="arrondi">Nos Produits</span></li>
+                <li class="circle5" onclick="maRedirection('{{ url('app_commandes') }}')"onmouseenter="changeMenu5()"onmouseleave="changeMenu1()"><span class="arrondi">Commandes</span></li>
+                <li class="circle6" onclick="maRedirection('{{ url('app_contact') }}')"onmouseenter="changeMenu6()"onmouseleave="changeMenu1()"><span class="arrondi">Contact</span></li>
+                </ol>
+                <div class="menu">
+                    <p id="descript">Bienvenue à La main à la pate</p>
+                </div>
+            </div>
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>
