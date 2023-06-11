@@ -1,12 +1,13 @@
-//navBar canvas
 
 
+// Fonction permettant la redirection en mettant le lien directement dans l'html
 function maRedirection(lien) {
     location.href = lien;
 }
 
+// Fonction permettant de changer dynamiquement le nom du menu de la navbar pour un meilleurs rendu visuel
 function changeMenu1(){
-    document.getElementById('descript').textContent= 'Bienvenue à La Main à La Pâte';
+    document.getElementById('descript').textContent= 'Bienvenue que pouvons nous faire pour vous?';
 };
 
 function changeMenu2(){
@@ -28,6 +29,3 @@ function changeMenu5(){
 function changeMenu6(){
     document.getElementById('descript').textContent= 'Contactez nous';
 };
-
-
-// comment ecrire en arc de cercle dans un input

@@ -36,7 +36,7 @@ html{
     background-position: center;
     background-image: url(../images/papevint.jpg);
 }
-
+// Effet en pente des articles
 .text * {
     position: relative;
     z-index: 1;
@@ -66,6 +66,8 @@ section {padding: 30px 0;}
     translate: -50% -50%;
 }
 
+
+
 .circle1 {
     position: absolute;
     z-index: 7;
@@ -74,7 +76,12 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 140px;
     height: 140px;
-    // margin: -75px;
+    animation-duration: 2s;
+    animation-name: vibration;
+    animation-iteration-count: 1;
+    animation-delay: 5s ;
+    
+    
 }
 
 .circle2 {
@@ -85,7 +92,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    // margin: -80px;
+    animation-duration: 2s;
+    animation-name: vibration;
+    animation-iteration-count: 1;
+    animation-delay: 25s ;
 }
 
 .circle3 {
@@ -96,7 +106,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 260px;
     height: 260px;
-    // margin: -85px;
+    animation-duration: 2s;
+    animation-name: vibration;
+    animation-iteration-count: 1;
+    animation-delay: 5s ;
 }
 
 .circle4 {
@@ -107,7 +120,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 320px;
     height: 320px;
-    // margin: -90px;
+    animation-duration: 400ms;
+    animation-name: vibration;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
 .circle5 {
@@ -118,7 +134,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 380px;
     height: 380px;
-    // margin: -95px;
+    animation-duration: 2s;
+    animation-name: vibration;
+    animation-iteration-count: 1;
+    animation-delay: 10s ;
 }
 
 .circle6 {
@@ -129,13 +148,26 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 440px;
     height: 440px;
-    // margin: -100px;
+    animation-duration: 2s;
+    animation-name: vibration;
+    animation-iteration-count: 1;
+    animation-delay: 15s ;
+    
 }
+
+@keyframes vibration {
+    0% { transform: translate(-50%, -50%) }
+    25% { transform: translate(-48%, -48%) }
+    50% { transform: translate(-52%, -48%) }
+    75% { transform: translate(-48%, -48%) }
+    100% { transform: translate(-50%, -50%) }
+  }
 
 .circle1:hover,.circle2:hover,.circle3:hover,.circle4:hover,.circle5:hover,.circle6:hover{
     position:absolute;
     transform: translate(-50%, -50%) scale(1.05);
 }
+
 
 
 
