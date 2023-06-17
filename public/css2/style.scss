@@ -76,9 +76,9 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 140px;
     height: 140px;
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-name: vibration;
-    animation-iteration-count: 1;
+    animation-iteration-count: 2;
     animation-delay: 5s ;
     
     
@@ -92,10 +92,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-name: vibration;
-    animation-iteration-count: 1;
-    animation-delay: 25s ;
+    animation-iteration-count: 2;
+    animation-delay: 15s ;
 }
 
 .circle3 {
@@ -106,10 +106,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 260px;
     height: 260px;
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-name: vibration;
-    animation-iteration-count: 1;
-    animation-delay: 5s ;
+    animation-iteration-count: 2;
+    animation-delay: 7s ;
 }
 
 .circle4 {
@@ -120,10 +120,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 320px;
     height: 320px;
-    animation-duration: 400ms;
+    animation-duration: 500ms;
     animation-name: vibration;
-    animation-iteration-count: 1;
-    animation-direction: normal;
+    animation-iteration-count: 2;
+     animation-delay: 10s ;
 }
 
 .circle5 {
@@ -134,10 +134,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 380px;
     height: 380px;
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-name: vibration;
-    animation-iteration-count: 1;
-    animation-delay: 10s ;
+    animation-iteration-count: 2;
+    animation-delay: 20s ;
 }
 
 .circle6 {
@@ -148,10 +148,10 @@ section {padding: 30px 0;}
     border-radius: 50%;
     width: 440px;
     height: 440px;
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-name: vibration;
-    animation-iteration-count: 1;
-    animation-delay: 15s ;
+    animation-iteration-count: 2;
+    animation-delay: 13s ;
     
 }
 
@@ -168,15 +168,6 @@ section {padding: 30px 0;}
     transform: translate(-50%, -50%) scale(1.05);
 }
 
-
-
-
-span.arrondi{
-    color: white;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-}
 
 .menu {   
     display: flex;
@@ -220,11 +211,7 @@ img {
     text-align: center;
 }
 
-footer {
-    width: 100%;
-    height:50px;
-    background-color: #381D2A;
-}
+
 
 #imgformat {
     width: 200px;
@@ -235,7 +222,8 @@ footer {
 .article {
     
     float: left;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     padding: 5px;
     background-color: rgba(252, 222, 150, 0.4);
     border-radius: 25px;
@@ -244,7 +232,8 @@ footer {
 .article2 {
     
     float: right;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     padding: 5px;
     background-color: rgba(252, 222, 150, 0.4);
     border-radius: 25px;
@@ -255,38 +244,27 @@ footer {
     height: 200px;
 }
 
-#test{
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    animation: effect 8sec linear infinite;
-}
 
-
-//@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700,900,400italic,700italic,900italic|Playfair+Display:400,700,900,400italic,700italic,900italic|Rock+Salt:400);
-
-*,
-:before,
-:after {
-    box-sizing: border-box;
-}
-
-// body {
-//     background-color: #1d1f20;
-//     color: #e5e5e5;
-//     font: 16px/1.25 'Crimson Text', sans-serif;
-//     margin: 0;
-// }
-
-#wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80em;
-}
-
-#container {
-
-    padding: 1em;
+// footer
+footer {
     width: 100%;
+    height:50px;
+    background-color: #381D2A;
+}
+.liens{
+    display: flex;
+    justify-content: space-around;
+}
+
+  .connexion {
+    background-color: #61130A;
+    border: solid;
+    border-radius: 25px;
+    margin: 5px;
+    color: white;
+  }
+.social{
+    width: 50px;
+    height: 50px;
 }
 

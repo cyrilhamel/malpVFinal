@@ -18,12 +18,12 @@
      <nav>
             <div class="parentCircle">
                 <ol>
-                <li class="circle1" onclick="maRedirection('{{ url('app_accueil') }}')"onmouseenter="changeMenu1()"onmouseleave="changeMenu1()"><span class="arrondi">La Main à la pâte</span></li>
-                <li class="circle2" onclick="maRedirection('{{ url('app_articles_index') }}')"onmouseenter="changeMenu2()"onmouseleave="changeMenu1()"><span class="arrondi">Actualité</span></li>
-                <li class="circle3" onclick="maRedirection('{{ url('app_ateliers_index') }}')"onmouseenter="changeMenu3()"onmouseleave="changeMenu1()"><span class="arrondi">Ateliers</span></li>
-                <li class="circle4" onclick="maRedirection('{{ url('app_produits_index') }}')"onmouseenter="changeMenu4()"onmouseleave="changeMenu1()"><span class="arrondi">Nos Créations</span></li>
-                <li class="circle5" onclick="maRedirection('{{ url('app_commandes') }}')"onmouseenter="changeMenu5()"onmouseleave="changeMenu1()"><span class="arrondi">Commandes</span></li>
-                <li class="circle6" onclick="maRedirection('{{ url('app_contact') }}')"onmouseenter="changeMenu6()"onmouseleave="changeMenu1()"><span class="arrondi">Contact</span></li>
+                <li class="circle1" onclick="maRedirection('{{ url('app_accueil') }}')"onmouseenter="changeMenu1()"onmouseleave="changeMenu1()"></li>
+                <li class="circle2" onclick="maRedirection('{{ url('app_articles_index') }}')"onmouseenter="changeMenu2()"onmouseleave="changeMenu1()"></li>
+                <li class="circle3" onclick="maRedirection('{{ url('app_ateliers_index') }}')"onmouseenter="changeMenu3()"onmouseleave="changeMenu1()"></li>
+                <li class="circle4" onclick="maRedirection('{{ url('app_produits_index') }}')"onmouseenter="changeMenu4()"onmouseleave="changeMenu1()"></li>
+                <li class="circle5" onclick="maRedirection('{{ url('app_commandes') }}')"onmouseenter="changeMenu5()"onmouseleave="changeMenu1()"></li>
+                <li class="circle6" onclick="maRedirection('{{ url('app_contact') }}')"onmouseenter="changeMenu6()"onmouseleave="changeMenu1()"></li>
                 </ol>
                 {# Permet de revenir à ce texte quand la souris quitte les arcs de cercles #}
                 <div class="menu">
@@ -32,5 +32,13 @@
             </div>
         </nav>
         {% block body %}{% endblock %}
+        <footer>
+        <div class="liens">
+        <input class="connexion" type="button" value="connexion/admin" onclick="maRedirection('{{ url('admin') }}')"></input>
+       <a href="https://www.facebook.com/lamainalapate65270"><img class="social" src="../../images/facebook.png" alt="réseau social facebook"</a>
+       <a href="https://www.instagram.com/la_main_a_la_pate_65270"><img class="social" src="images/instagram.png" alt="réseau social instagram"</a>
+        
+        </div>
+        </footer>
     </body>
 </html>

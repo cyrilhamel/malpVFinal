@@ -49,7 +49,7 @@ class AdminMainALaPateController extends AbstractDashboardController
     {
     
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
-        yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'accueil');
+        yield MenuItem::linktoRoute('Retour à l\'accueil', 'fas fa-home', 'app_accueil');
         yield MenuItem::linkToCrud('Articles', 'fas fa-map-marker-alt', Articles::class);
         yield MenuItem::linkToCrud('Ateliers', 'fas fa-comments', Ateliers::class);
         yield MenuItem::linkToCrud('Produits', 'fas fa-comments', Produits::class);
