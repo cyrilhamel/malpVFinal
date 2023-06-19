@@ -21,17 +21,17 @@
                 <td>{{ article.nomArticle }}</td>
                 <td>{{ article.texteArticle }}</td>
                 <td>
-                    <a href="{{ path('app_articles_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('app_articles_edit', {'id': article.id}) }}">edit</a>
+                    <a href="{{ path('app_articles_show', {'id': article.id}) }}">afficher</a>
+                    <a href="{{ path('app_articles_edit', {'id': article.id}) }}">editer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">pas d'article trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_articles_new') }}">Create new</a>
+    <a href="{{ path('app_articles_new') }}">Creer un nouvel article</a>
 {% endblock %}
