@@ -6,6 +6,7 @@ use App\Entity\Ateliers;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class AteliersType extends AbstractType
 {
@@ -18,6 +19,16 @@ class AteliersType extends AbstractType
             ->add('dateFinAtelier')
             ->add('placesAtelier')
             ->add('prixAtelier')
+            ->add('imageFile', VichImageType::class, [
+                'required' => false,
+                'allow_delete' => true,
+                'delete_label' => '...',
+                'download_label' => '...',
+                'download_uri' => true,
+                'image_uri' => true,
+                'imagine_pattern' => '...',
+                'asset_helper' => true,
+            ])
         ;
     }
 
