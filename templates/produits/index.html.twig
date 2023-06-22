@@ -3,29 +3,24 @@
 {% block title %}Produits index{% endblock %}
 
 {% block body %}
-    <h1>Produits index</h1>
-
+    <h1>Nos Créations</h1>
+<section class="image"></section>
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>NomProduit</th>
-                <th>DescrProduit</th>
-                <th>PrixProduit</th>
-                <th>actions</th>
+                <th>Produit</th>
+                <th>Description</th>
+                <th>Prix</th>
             </tr>
         </thead>
         <tbody>
         {% for produit in produits %}
             <tr>
-                <td>{{ produit.id }}</td>
                 <td>{{ produit.nomProduit }}</td>
                 <td>{{ produit.descrProduit }}</td>
-                <td>{{ produit.prixProduit }}</td>
-                <td>
-                    <a href="{{ path('app_produits_show', {'id': produit.id}) }}">show</a>
-                    <a href="{{ path('app_produits_edit', {'id': produit.id}) }}">edit</a>
-                </td>
+                <td>{{ produit.prixProduit }} €</td>
+                <td><img class="illustr" src="{{ vich_uploader_asset(produit) }}" alt="{{ produit.nomProduit }}"></td>
+             
             </tr>
         {% else %}
             <tr>
@@ -34,6 +29,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_produits_new') }}">Create new</a>
+<section class="image"></section>
 {% endblock %}

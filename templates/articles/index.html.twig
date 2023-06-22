@@ -1,29 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articles index{% endblock %}
+{% block title %}Actualité{% endblock %}
 
 {% block body %}
-    <h1>Articles index</h1>
 
+    <h1>Actualité</h1>
+    <section class="image"></section>
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>NomArticle</th>
-                <th>TexteArticle</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th>Article</th>   
             </tr>
         </thead>
         <tbody>
         {% for article in articles %}
-            <tr>
-                <td>{{ article.id }}</td>
+            <tr.bg-warning>
                 <td>{{ article.nomArticle }}</td>
                 <td>{{ article.texteArticle }}</td>
-                <td>
-                    <a href="{{ path('app_articles_show', {'id': article.id}) }}">afficher</a>
-                    <a href="{{ path('app_articles_edit', {'id': article.id}) }}">editer</a>
-                </td>
+                <td><img class="illustr" src="{{ vich_uploader_asset(article) }}" alt="{{ article.nomArticle }}"></td>
             </tr>
         {% else %}
             <tr>
@@ -32,6 +27,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_articles_new') }}">Creer un nouvel article</a>
+    <section class="image"></section>
 {% endblock %}

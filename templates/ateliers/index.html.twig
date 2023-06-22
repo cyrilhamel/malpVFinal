@@ -3,35 +3,29 @@
 {% block title %}Ateliers index{% endblock %}
 
 {% block body %}
-    <h1>Ateliers index</h1>
-
+    <h1>Nos ateliers</h1>
+<section class="image"></section>
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>NomAtelier</th>
-                <th>DescrAtelier</th>
-                <th>DateAtelier</th>
-                <th>DateFinAtelier</th>
-                <th>PlacesAtelier</th>
-                <th>PrixAtelier</th>
-                <th>actions</th>
+                <th>Atelier</th>
+                <th>description</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+                <th>Places disponibles</th>
+                <th>Prix</th>
             </tr>
         </thead>
         <tbody>
         {% for atelier in ateliers %}
             <tr>
-                <td>{{ atelier.id }}</td>
                 <td>{{ atelier.nomAtelier }}</td>
                 <td>{{ atelier.descrAtelier }}</td>
                 <td>{{ atelier.dateAtelier ? atelier.dateAtelier|date('Y-m-d') : '' }}</td>
                 <td>{{ atelier.dateFinAtelier ? atelier.dateFinAtelier|date('Y-m-d') : '' }}</td>
                 <td>{{ atelier.placesAtelier }}</td>
-                <td>{{ atelier.prixAtelier }}</td>
-                <td>
-                    <a href="{{ path('app_ateliers_show', {'id': atelier.id}) }}">show</a>
-                    <a href="{{ path('app_ateliers_edit', {'id': atelier.id}) }}">edit</a>
-                </td>
+                <td>{{ atelier.prixAtelier }} €</td>
+                <td><img class="illustr" src="{{ vich_uploader_asset(atelier) }}" alt="{{ atelier.nomAtelier }}"></td>
             </tr>
         {% else %}
             <tr>
@@ -40,6 +34,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_ateliers_new') }}">Create new</a>
+    <section class="image"></section>
 {% endblock %}
