@@ -13,6 +13,10 @@ html {
   background-color: #381D2A;
 }
 
+a:hover, li:hover, input:hover {
+  cursor: url("/images/fouet2.png"), auto;
+}
+
 /*Barre de navigation*/
 .parentCircle {
   padding-bottom: 15px;
@@ -25,14 +29,6 @@ html {
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-}
-
-.image {
-  height: 250px;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-image: url(../images/papevint.jpg);
 }
 
 .text * {
@@ -196,8 +192,12 @@ body {
   height: 100%;
 }
 
-a:hover, li:hover {
-  cursor: url("/images/fouet2.png"), auto;
+.image {
+  height: 250px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url(../images/papevint.jpg);
 }
 
 div {
