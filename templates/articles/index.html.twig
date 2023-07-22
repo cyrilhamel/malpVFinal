@@ -3,8 +3,21 @@
 {% block title %}Actualité{% endblock %}
 
 {% block body %}
-
-    <h1>Actualité</h1>
+<section class="image"></section>
+{% for article in articles %}
+    <section class="text">
+    <img class="article" src="{{ vich_uploader_asset(article) }}" alt="{{ article.nomArticle }}">
+        <h2>{{ article.nomArticle }}</h2>
+        <p>{{ article.texteArticle }}</p>
+    </section>
+    <section class="image"></section>
+    
+     {% else %}
+            
+                <p>pas d'article trouvé</p>
+            
+        {% endfor %}
+    {# <h1>Actualité</h1>
     <section class="image"></section>
     <table class="table">
         <thead>
@@ -27,5 +40,5 @@
         {% endfor %}
         </tbody>
     </table>
-    <section class="image"></section>
+    <section class="image"></section> #}
 {% endblock %}
